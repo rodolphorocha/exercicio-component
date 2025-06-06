@@ -1,5 +1,5 @@
 <script setup>
-    const emit = defineEmits(['show-cart'])
+    defineEmits(['show-cart'])
 </script>
 
 <template>
@@ -36,7 +36,7 @@ header nav {
   align-items: center;
   padding: 2vh 8vw;
   border-bottom: 2px solid #27ae6099;
-  
+
   & a {
     text-decoration: none;
     color: #000;

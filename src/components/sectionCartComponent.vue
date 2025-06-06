@@ -1,6 +1,6 @@
 <script setup>
     defineProps(['cart'])
-    const emit = defineEmits(['back-shop', 'increment-cart', 'decrement-cart'])
+    defineEmits(['back-shop', 'increment-cart', 'decrement-cart'])
 </script>
 
 <template>

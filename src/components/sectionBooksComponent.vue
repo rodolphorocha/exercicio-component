@@ -1,12 +1,20 @@
 <script setup>
 defineProps(['books'])
-const emit = defineEmits(['add-to-cart'])
+defineEmits(['add-to-cart'])
+
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+function openBook(id) {
+  router.push({ name: 'Book', params: { id  }})
+
+}
 </script>
- 
+
 <template>
  <section class="books">
       <article class="book" v-for="book in books" :key="book.id">
-        <img :src="book.cover" :alt="book.title" />
+        <img :src="book.cover" :alt="book.title" @click="openBook(book.id)" />
         <h2>{{ book.title }}</h2>
         <p class="book-author">{{ book.author }}</p>
         <span class="price-and-like">

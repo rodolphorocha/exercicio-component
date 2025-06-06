@@ -19,9 +19,11 @@ const router = createRouter({
             component: TeamView
         },
         {
-            path: '/termos',
-            name: 'Termos',
-            component: TermosView
+             path: '/livro/:id',
+          name: 'Book',
+          component: () => import('@/views/BookView.vue'),
+          props: true,
+
         },
         {
             path: '/envio',
@@ -32,6 +34,11 @@ const router = createRouter({
             path: '/devolucoes',
             name: 'Devoluções',
             component: DevolucoesView
+        },
+        {
+            path: '/termos',
+            name: 'Termos',
+            component: TermosView
         },
     ]
     });
